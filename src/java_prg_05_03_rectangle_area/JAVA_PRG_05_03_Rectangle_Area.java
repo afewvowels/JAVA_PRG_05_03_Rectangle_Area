@@ -5,6 +5,7 @@
  */
 package java_prg_05_03_rectangle_area;
 
+import java.util.Scanner;
 /**
  *
  * @author bluebackdev
@@ -31,8 +32,49 @@ public class JAVA_PRG_05_03_Rectangle_Area {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args)
+    {
+        displayData(getArea(getLength(), getWidth()));
+    }
+    
+    public static double getLength()
+    {
+        double dblLength;
+        
+        Scanner scrKeyboard = new Scanner(System.in);
+        
+        System.out.print("Please enter the rectangle's length: ");
+        
+        dblLength = scrKeyboard.nextDouble();
+        
+        return dblLength;
+    }
+    
+    public static double getWidth()
+    {
+        double dblWidth;
+        
+        Scanner scrKeyboard = new Scanner(System.in);
+        
+        System.out.print("Please enter the rectangle's width: ");
+        
+        dblWidth = scrKeyboard.nextDouble();
+        
+        return dblWidth;
+    }
+    
+    public static double getArea(double dblHeight, double dblWidth)
+    {
+        double dblArea;
+        
+        dblArea = dblHeight * dblWidth;
+        
+        return dblArea;
+    }
+    
+    public static void displayData(double dblArea)
+    {
+        System.out.println("That rectangle\'s area is " + dblArea + " units squared.");
     }
     
 }
